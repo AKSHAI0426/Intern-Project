@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      background-color: rgb(153, 225, 253);
+    }
+    nav a {
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JAMES HOSPITALS</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="doctor.html">Specialists</a>
+      <a href="book.html" onclick="bookNow(event)">Book Appointments</a>
+      <a href="map.html" onclick="confirmLocation(event)">Location</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>We care for your health.....!</h2>
+    <p>Book the appointment and take care for your health with the best consulting....!</p>
+  </section>
+  <section class="department">
+    <h2>Divisions</h2>
+    <div class="grid">
+      <div class="card">Cardiology</div>
+      <div class="card">Neurology</div>
+      <div class="card">Orthopedics</div>
+      <div class="card">Pediatrics</div>
+      <div class="card">Gynocology</div>
+      <div class="card">Nephrology</div>
+      <div class="card">Ophthalmology</div>
+      <div class="card">Pulmonology</div>
+    </div>
+  </section>
+  <section class="footer">
+    <h2>Need Help?</h2>
+    <p>Call us anytime: +91-12345-67890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 James Hospitals</p>
+  </footer>
+  <script>
+    function bookNow(event) {
+      event.preventDefault();
+      alert("Redirecting to appointment booking page...");
+      window.location.href = "book.html";
+    }
+    function confirmLocation(event) {
+      event.preventDefault();
+      if (confirm("Do you want to open the location map?")) {
+        window.location.href = "map.html";
+      }
+    }
+  </script>
+</body>
+</html>
